@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="join_common.css">
+    <script src="join.js" defer></script>
+</head>
+<body>
+    <header class="hd">
+        <div class="hd_dv">
+            <h1 class="logo"><a href="index.html"><img src="./img/logo.png" alt="로고"></a></h1>
+            <div class="gnb">
+                <ul class="menu">
+                    <li>COMPANY</li>
+                    <li>BUSINESS</li>
+                    <li>IR</li>
+                    <li>NOTICE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ham">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="close">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="secA">
+        <div class="welcom">
+            <img src="./img/img_welcome_tpa.png" alt="">
+            <p>초록뱀미디어에 오신걸 환영합니다.</p>
+        </div>
+    </div>
+    <form action="joinok.php" method="post" name="join_form">
+        <section class="secB">
+            <div class="joinD">
+                <h3>회원가입</h3>
+                <label for="uid">아이디 <strong>*</strong></label>
+                <div>
+                    <input type="text" name="uid" id="uid">
+                    <button onclick="id_check()">중복아이디 검색</button>
+                    <p><strong>*</strong>
+                    최소 8자 ~ 최대 20자를 입력하세요.
+                    </p>
+                </div>
+                <label for="u_name">이름<strong>*</strong></label>
+                <div>
+                    <input type="text" name="u_name" id="u_name" value="길형인" disabled>
+                    <p><strong>*</strong></p>
+                </div>
+                <label for="pwd">패스워드 <strong>*</strong></label>
+                <div>
+                    <input type="password" name="pwd" id="pwd">
+                    <p><strong>*</strong>
+                    최소 8자 ~ 최대 20자를 입력하세요.
+                    </p>
+                </div>
+                <label for="repwd">패스워드확인<strong>*</strong></label>
+                <div>
+                    <input type="password" name="repwd" id="repwd">
+                </div>
+                <label for="mobile">핸드폰<strong>*</strong></label>
+                <div>
+                    <input type="tel" name="mobile" id="mobile1" value="010" disabled> -
+                    <input type="tel" name="mobile" id="mobile2"> -
+                    <input type="tel" name="mobile" id="mobile3">
+                    <p><strong>*</strong>
+                        핸드폰번호를 꼭 입력해주세!(미입력시 회원가입이 정상적으로 되지 않을수도 있습니다.)
+                    </p>
+                    <p><strong>*</strong>
+                        핸드폰번호를 입력하시면 민원처리 진행상황 알림 서비스를 받을 수 있습니다.
+                    </p>
+                </div>
+                <label for="email_id">이메일<strong>*</strong></label>
+                <div>
+                    <input type="text" name="email_id" id="email_id">@
+                    <input type="text" name="email_add" id="email_add">
+                    <select name="email_sel" id="email_sel" onchange="chang_email()">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="gmail.com">구글</option>
+                        <option value="nate.com">네이트</option>
+                    </select>
+                </div>
+                <nav class="but">
+                    <nav class="btns">
+                        <button type="button" onclick="joinform_check()">가입하기</button>
+                        <button type="reset">취소하기<a href="./index.html"></a></button>
+                        <button type="button" onclick="history_back()">이전페이지</button>
+                    </nav>
+                </nav>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

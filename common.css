@@ -1,0 +1,1308 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Noto+Serif+KR:wght@200&display=swap');
+
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+body {
+    background-color: black;
+    padding-top: 84px;
+}
+
+/* ----------------- header 시작 ------------------- */
+.hd {
+    position: fixed;
+    background-color: rgba(0,0,0,1);
+    border-bottom: 1px solid white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.1s ease-in-out;
+}
+
+.nav-up {
+    top: -84px;
+}
+
+.hd_dv {
+    position: relative;
+    max-width: 1800px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; 
+    margin: 9px; 
+    cursor: pointer;
+}
+.logo img {width: 100%;}
+
+.gnb {
+    width: 100%;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    text-align: center;
+    color: white;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    position: relative;
+}
+.menu li:nth-of-type(3) {
+    padding: 2rem 4rem;
+}
+.menu li:nth-of-type(4) {
+    padding: 0;
+}
+.menu li a {
+    display: block;
+    color: white;
+    padding: 2rem 3rem;
+}
+.ham {display: none;}
+.close { display: none;}
+/* ----------------- header 끝 ------------------- */
+/* ----------------- secA 시작 ------------------- */
+
+.secA {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 970px;
+}
+
+.main {
+    position: absolute;
+    top: -60px;
+    left: 0;
+}
+.main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1300px;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+}
+.main_video {
+    width: 100%;
+    z-index: 1;
+}
+
+.line_one {
+    position: absolute;
+    color: white;
+    width: 30%;
+    padding: 1.5rem;
+    border: 1px solid white;
+    border-bottom: transparent;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-30%);
+    z-index: 10;
+}
+
+.line_one::before {
+    position: absolute;
+    content: "";
+    border: 4px solid white;
+    border-bottom: transparent;
+    border-right: transparent;
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    left: -3px;
+    z-index: 10;
+}
+.line_two {
+    position: absolute;
+    color: white;
+    width: 30%;
+    padding: 4rem;
+    border: 1px solid white;
+    border-top: transparent;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%,-30%);
+    z-index: 10;
+}
+.line_two::after {
+    position: absolute;
+    content: "";
+    border: 4px solid white;
+    border-top: transparent;
+    border-left: transparent;
+    width: 20px;
+    height: 20px;
+    bottom: -3px;
+    right: -3px;
+    z-index: 10;
+}
+
+.span_p {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-45%);
+    z-index: 10;
+}
+.span_p p {
+    width: 100%;
+    padding: 1rem;
+}
+.span_p p:nth-of-type(1) {
+    display: block;
+    font-size: 50px;
+    transition: .5s;
+}
+.span_p p:nth-of-type(2) {
+    display: block;
+    font-size: 26px;
+    width: 30%;
+    text-align: center;
+    transition: .5s; 
+}
+.span_p p:nth-of-type(2) strong {
+    color: #65BA4B;
+    font-size: 30px;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+/* ----------------- secA 끝 ------------------- */
+/* ----------------- secB 시작 ------------------- */
+.secB {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.secB_two {
+    position: relative;
+    max-width: 1400px;
+    width: calc(100% - 20px);
+    margin: auto;
+    z-index: 100;
+}
+
+.secB h2 {
+    font-size: 40px;
+    padding: 7rem 0 4rem 0;
+    margin-left: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    width: 97%;
+    font-weight: bold;
+    z-index: 100;
+}
+.secB h2::before {
+    content: "";
+    position: absolute;
+    border: 2px solid red;
+    background-color: red;
+    left: 0;
+    top: 132px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.img_mo {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 6rem 0 5rem 0;
+}
+.img_mo::after {
+    content: "";
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    width: 97%;
+    z-index: 100;
+}
+.img_mo > div {
+    width: calc(100% / 3);
+    padding-left: 4rem;
+    z-index: 100;
+}
+
+.img_mo > div > p:nth-of-type(1) {
+    font-size: 25px;
+    font-weight: 400;
+    padding-top: 3rem;
+}
+.img_mo > div > span {
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    color: rgba(0,0,0,0.7);
+}
+.img_mo > div > img {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.bam {
+    position: absolute;
+    width: 60px;
+    bottom: 53px;
+    right: 6px;
+    transform: rotate(-60deg);
+    z-index: 1000;
+}
+.secB_video{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+.secB_video video {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+/* ----------------- secB 끝 ------------------- */
+/* ----------------- secC 시작 ------------------- */
+
+.secC {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.drama_ot {
+    display: none;
+}
+.sitcom_ot {
+    display: none;
+}
+.drama_ot.on {
+    display: block;
+}
+.sitcom_ot.on {
+    display: block;
+}
+.other {
+    position: relative;
+    max-width: 1400px;
+    width: calc(100% - 20px);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.secC_two {
+    position: relative;
+    max-width: 1400px;
+    width: calc(100% - 20px);
+    margin: auto;
+}
+.secC h2 {
+    margin-left: 20px;
+    font-size: 40px;
+    padding: 7rem 0 4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    width: 97%;
+    font-weight: bold;
+    color: white;
+}
+
+.secC h2::before {
+    content: "";
+    position: absolute;
+    border: 2px solid #433DFF;
+    background-color: #433DFF;
+    left: 0;
+    top: 132px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.drama_list {
+    color: white;
+    margin-left: 20px;
+    font-size: 14px;
+    width: 200px;
+    padding-top: 3rem;
+}
+.drama_list li {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drama_img li {
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 35%;
+    transform: translateX(-35%);
+    width: 30%;
+}
+.drama_img li img {
+    width: 100%;
+}
+
+.drama_img li.on {
+    display: block;
+}
+.drama_list li:hover {
+    color: lightgreen;
+}
+.drama_list .on {
+    color: lightgreen;
+}
+.drama_list .on::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    border-bottom: transparent;
+    border-right: transparent;
+}
+.drama_list .on::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    border-top: transparent;
+    border-left: transparent;
+}
+
+.drama_p {
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 150px;
+}
+
+.drama_p li {
+    width: 450px;
+    position: absolute;
+    right: 0;
+}
+
+.drama_p li h3 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.drama_p li h3 p:nth-of-type(1) {
+    color: #BCBCBC;
+}
+
+.drama_p li iframe {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 400px;
+}
+.drama_p li img {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 400px;
+}
+
+.drama_p li>p:nth-of-type(1){
+    height: 95px;
+}
+.drama_p li>p:nth-of-type(2){
+    font-size: 14px;
+}
+.drama_p li>p {
+    color: #DFDFDF;
+    line-height: 22px;
+}
+
+.drama_p li{
+    display: none;
+}
+
+.drama_p li.on {
+    display: block;
+}
+/*  */
+.sitcom_list {
+    color: black;
+    margin-left: 20px;
+    font-size: 14px;
+    width: 200px;
+    padding-top: 3rem;
+}
+.sitcom_list li {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sitcom_img li {
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 35%;
+    transform: translateX(-35%);
+    width: 30%;
+}
+.sitcom_img li img {
+    width: 100%;
+}
+
+.sitcom_img li.on {
+    display: block;
+}
+.sitcom_list li:hover {
+    color: green;
+}
+.sitcom_list li.on {
+    color: green;
+}
+
+.sitcom_list li.on::before  {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-bottom: transparent;
+    border-right: transparent;
+}
+
+.sitcom_list li.on::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-top: transparent;
+    border-left: transparent; 
+}
+
+.sitcom_p {
+    position: absolute;
+    color: black;
+    right: 0;
+    top: 150px;
+}
+
+.sitcom_p li {
+    width: 450px;
+    position: absolute;
+    right: 0;
+}
+
+.sitcom_p li h3 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.sitcom_p li h3 p:nth-of-type(2) {
+    color: #BCBCBC;
+}
+
+.sitcom_p li iframe {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 400px;
+}
+.sitcom_p li img {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 400px;
+}
+
+.sitcom_p li>p:nth-of-type(1){
+    height: 95px;
+}
+.sitcom_p li>p:nth-of-type(2){
+    font-size: 14px;
+}
+.sitcom_p li>p {
+    color: rgba(0,0,0,0.7);
+    line-height: 22px;
+}
+
+.sitcom_p li{
+    display: none;
+}
+
+.sitcom_p li.on {
+    display: block;
+}
+.sitcom1 .sitcomall7 p:nth-of-type(2){
+    font-size: 12px;
+}
+/*  */
+.changebutton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    color: white;
+}
+
+.drama,
+.sitcom {
+    width: 120px;
+    height: 499px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    writing-mode: tb-rl;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.drama {
+    border-right: 1px solid white;
+}
+
+.sitcom {
+    background-color: white;
+    color: black;
+    border-bottom: black;
+    border-top: 1px solid black;
+}
+
+.sitcom.on {
+    border-right: 1px solid black;
+}
+.secC_two .h2.on {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+/* ----------------- secC 끝 ------------------- */
+/* ----------------- secD 시작 ------------------- */
+.secD {
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+}
+
+.secD_two {
+    position: relative;
+    max-width: 1400px;
+    width: calc(100% - 20px);
+    margin: auto;
+}
+.secD_h2 {
+    position: relative;
+}
+.secD h2 {
+    margin-left: 20px;
+    font-size: 40px;
+    padding: 7rem 0 4rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.7);
+    width: 97%;
+    font-weight: bold;
+}
+
+.secD h2::before {
+    content: "";
+    position: absolute;
+    border: 2px solid #65BA4B;
+    background-color: #65BA4B;
+    left: 0;
+    top: 132px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.secD_dv {
+    width: 100%;
+    
+}
+.secD_list {
+    width: 100%;
+}
+.secD_list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    margin: 20px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    
+}
+.secD_list li p:nth-of-type(1) {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.secD_list li p:nth-of-type(2) {
+    color: #575757;
+}
+
+.secD_bt {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.secD_bt button {
+    width: 230px;
+    height: 75px;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* ----------------- secD 끝 ------------------- */
+/* ----------------- footer 시작 ------------------- */
+
+.ft {
+    height: 200px;
+    background-color: #686868;
+}
+
+.ft_two {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    align-items: center;
+}
+.ft_two p {
+    color: #B2B2B2;
+}
+
+.ft_two img {
+    width: 150px;
+}
+.ft>p {
+    color: #DFDFDF;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+/* ----------------- footer 끝 ------------------- */
+
+@media (min-width:1880px) {
+    .secB_video .video1.on {
+        display: block;
+    }
+    .secB_video .video2.on {
+        display: block;
+    }
+    .secB_video .video3.on {
+        display: block;
+    }
+    
+    .img_mo img:hover {
+        border: 1px solid white;
+    }
+    .img1 img.on{opacity: 0.1;}
+    .img2 img.on{opacity: 0.1;} 
+    .img3 img.on{opacity: 0.1;}
+    .img_mo p.on{color: white;}
+    .img_mo span.on{color: white;}
+    .secB h2.on {color: white;}
+}
+
+@media (max-width:1660px) {
+    .secA {
+        overflow: hidden;
+        height: 800px;
+    }
+    .main_video {
+        width: 150%;
+    }
+    .secC {
+        position: relative;
+    }
+    .changebutton {
+        position: absolute;
+        display: flex;
+        top: 186px;
+        height: 20px;
+        right: 0;
+    }
+    .drama {
+        margin-left: 30px;
+        width: 150px;
+        height: 30px;
+        writing-mode:vertical-lr;
+    }
+    .sitcom {
+        width: 150px;
+        height: 30px;
+        writing-mode:vertical-lr;
+    }
+}
+@media (min-width:601px) and (max-width:1028px) {
+    .secA {
+        overflow: hidden;
+        height: 600px;
+    }
+    .main {
+        left: -300px;
+    }
+    .main_video {
+        width: 1300px;
+    }
+    
+    .menu li {
+        padding: 2rem 2rem;
+        font-size: 12px;
+        transition: .5s;
+    }
+    .menu li:nth-of-type(3) {
+        padding: 2rem 3rem;
+    }
+    .span_p p:nth-of-type(1) {
+        display: block;
+        font-size: 30px;
+        transition: .5s;
+    }
+    .span_p p:nth-of-type(2) {
+        display: block;
+        font-size: 20px;
+        width: 58%;
+        text-align: center;
+        transition: .5s;  
+    }
+    .span_p p:nth-of-type(2) strong {
+        color: #65BA4B;
+        font-size: 25px;
+        margin-top: 10px;
+        transition: .5s;
+    }
+    .img_mo > div {
+        padding-left: 2rem;
+    }
+    .img_mo > div > img {
+        width: 100%;
+    }
+    .img_mo > div > p:nth-of-type(1){
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .img_mo > div > p:nth-of-type(2){
+        font-size: 14px;
+    }
+    .drama_img li img,
+    .sitcom_img li img{
+        display: none;
+    }
+}
+
+
+@media (min-width:599px) and (max-width:700px) {
+    
+    .secA {
+        overflow: hidden;
+        height: 600px;
+    }
+    .main {
+        left: -300px;
+    }
+    .main_video {
+        width: 1300px;
+    }
+    .gnb {
+        display: block !important;
+    }
+    .drama_img li img{
+        display: none;
+    }
+    .drama_list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .drama_list li {
+        padding: 1.5rem;
+        width: 25%;
+        
+    }
+    .drama_p {
+        position: absolute;
+        color: white;
+        left: 0;
+        top: 230px;
+    }
+    .sitcom_img li img{
+        display: none;
+    }
+    .sitcom_list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .sitcom_list li {
+        padding: 1.5rem;
+        width: 25%;
+        
+    }
+    .sitcom_p {
+        position: absolute;
+        color: white;
+        left: 0;
+        top: 230px;
+    }
+    .drama {
+        margin-left: 30px;
+        width: 150px;
+        height: 30px;
+        writing-mode:vertical-lr;
+    }
+    .sitcom {
+        width: 150px;
+        height: 30px;
+        writing-mode:vertical-lr;
+    }
+
+    
+
+}
+
+@media (max-width:600px) {
+    .bd.on{
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .logo {width: 90px; margin: 12px;}
+    .logo img {width: 100%;}
+    .gnb {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: #111;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .menu {
+        position: relative;
+        display: block;
+        padding-top: 5rem;
+        width: 100%;
+    }
+    .menu li {
+        padding: 2rem 3rem;
+        border-bottom: 1px solid white;
+    }
+    .menu li:nth-of-type(1) {
+        border-top: 1px solid white;
+    }
+    .menu li:hover {
+        background-color: rgba(230, 230, 230, 1);
+        color: black;
+    }
+    .ham {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .ham span {
+        display: block;
+        background-color: white;
+        width: 40px;
+        height: 4px;
+        margin: 3px;
+    }
+    .close {
+        
+        display: none;
+        position: absolute;
+        top: 35px;
+        right: 25px;
+        color: white;
+        cursor: pointer;
+    }
+    .close span {
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        background-color: white;
+        height: 4px;
+        margin: -4px;
+    }
+    .close span:nth-of-type(1) {
+        transform: rotate(45deg);
+    }
+    .close span:nth-of-type(2) {
+        transform: rotate(-45deg);
+    }
+    .span_p p:nth-of-type(1) {
+        display: block;
+        font-size: 20px;
+        transition: .5s;
+    }
+    .span_p p:nth-of-type(2) {
+        display: block;
+        font-size: 14px;
+        width: 62%;
+        text-align: center;
+        transition: .5s; 
+    }
+    .span_p p:nth-of-type(2) strong {
+        color: #65BA4B;
+        font-size: 20px;
+        margin-top: 10px;
+        transition: .5s;
+    }
+    .secA {
+        overflow: hidden;
+        height: 600px;
+    }
+    .main {
+        left: -300px;
+    }
+    .main_video {
+        width: 1300px;
+    }
+    .img_mo {
+        display: block;
+
+    }
+    .img_mo > div {
+        width: 100%;
+        padding-left: 0rem;
+    }
+    .img_mo > div > img {
+        width: 100%;
+    }
+    .img_mo > div > p:nth-of-type(1){
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .img_mo > div > p:nth-of-type(2){
+        font-size: 14px;
+    }
+    .drama_img li img{
+        display: none;
+    }
+    .drama_list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .drama_list li {
+        padding: 1.5rem;
+        width: 25%;
+        font-size: 12px;
+    }
+    .drama_p {
+        position: absolute;
+        color: white;
+        left: 0;
+        top: 230px;
+    }
+    .sitcom_img li img{
+        display: none;
+    }
+    .sitcom_list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .sitcom_list li {
+        padding: 1.5rem;
+        width: 25%;
+        font-size: 12px;
+    }
+    .sitcom_p {
+        position: absolute;
+        left: 0;
+        top: 230px;
+    }
+    .drama {
+        padding: 0.9rem;
+        margin-left: 30px;
+        width: 150px;
+        height: 30px;
+        writing-mode:vertical-lr;
+    }
+    .drama.on {
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+    }
+    .sitcom {
+        padding: 0.9rem;
+        width: 150px;
+        height: 30px;
+        writing-mode:vertical-lr;
+    }
+
+    .secD_list li p:nth-of-type(1) {
+        display: block;
+        font-size: 14px;
+    }
+    .secD_list li p:nth-of-type(2) {
+        font-size: 12px;
+    }
+    .secD_bt button {
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .ft_two img {
+        width: 100px;
+    }
+    .ft_two p {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:450px) {
+    .secA {
+        overflow: hidden;
+        height: 844px;
+    }
+    .secA {
+        height: 600px;
+    }
+    .main {
+        left: -300px;
+    }
+    .main_video {
+        width: 1300px;
+    }
+    .line_one {
+        position: absolute;
+        color: white;
+        width: 60%;
+        padding: 1.5rem;
+        border: 1px solid white;
+        border-bottom: transparent;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%,-35%);
+    }
+    
+    .line_one::before {
+        position: absolute;
+        content: "";
+        border: 4px solid white;
+        border-bottom: transparent;
+        border-right: transparent;
+        width: 20px;
+        height: 20px;
+        top: -3px;
+        left: -3px;
+    }
+    .line_two {
+        position: absolute;
+        color: white;
+        width: 60%;
+        padding: 2rem;
+        border: 1px solid white;
+        border-top: transparent;
+        left: 50%;
+        bottom: 35%;
+        transform: translate(-50%,-35%);
+    }
+    .line_two::after {
+        position: absolute;
+        content: "";
+        border: 4px solid white;
+        border-top: transparent;
+        border-left: transparent;
+        width: 20px;
+        height: 20px;
+        bottom: -3px;
+        right: -3px;
+    }
+    
+    .span_p {
+        color: white;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        top: 45%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%,-45%);
+    }
+    .span_p p {
+        width: 100%;
+        padding: 1rem;
+    }
+    .span_p p:nth-of-type(1) {
+        display: block;
+        font-size: 18px;
+        transition: .5s;
+    }
+    .span_p p:nth-of-type(2) {
+        display: block;
+        font-size: 16px;
+        width: 80%;
+        text-align: center;
+        transition: .5s; 
+    }
+    .span_p p:nth-of-type(2) strong {
+        color: #65BA4B;
+        font-size: 18px;
+        margin-top: 10px;
+        transition: .5s;
+    }
+    .secB_video video {
+        display: none;
+    }
+
+    .secC {
+        height: 1100px;
+    }
+
+    .drama_list {
+        padding-top: 1rem;
+    }
+    .drama_list li {
+        width: 50%;
+    }
+    .sitcom_list {
+        padding-top: 1rem;
+    }
+    .sitcom_list li {
+        width: 50%;
+        z-index: 10;
+    }
+    .drama_p {
+        padding-top: 3rem;
+    }
+    .drama_p li {
+        width: 100%;
+    }
+    .drama_p li iframe {
+        width: 350px;
+    }
+    .sitcom_p {
+        padding-top: 5rem;
+        z-index: 1;
+    }
+    .sitcom_p li {
+        width: 100%;
+    }
+    .sitcom_p li iframe {
+        width: 350px;
+    }
+    .sitcom_p li img {
+        width: 350px;
+    }
+    .drama,
+    .sitcom {
+        font-size: 14px;
+    }
+    
+    .secD_list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+        margin: 10px;
+        border-bottom: 1px solid black;
+        cursor: pointer;
+        
+    }
+    .secD_list li p:nth-of-type(1) {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+    .secD_list li p:nth-of-type(2) {
+        color: #575757;
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    .secD {
+        height: 844px;
+    }
+    .secD_bt {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .secD_bt button {
+        width: 100px;
+        height: 55px;
+        background-color: transparent;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .ft {
+        height: 200px;
+        background-color: #686868;
+    }
+    .ft>p {
+        font-size: 12px;
+    }
+    .ft_two {
+        max-width: 1400px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+        align-items: center;
+    }
+    .ft_two p {
+        color: #B2B2B2;
+    }
+    
+    .ft_two img {
+        width: 130px;
+        margin-right: 20px;
+    }
+    .ft>p {
+        color: #DFDFDF;
+        padding-top: 3rem;
+        text-align: center;
+    }
+    .p_two {
+        display: none;
+    }
+}

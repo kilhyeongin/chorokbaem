@@ -1,0 +1,306 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Noto+Serif+KR:wght@200&display=swap');
+
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+.hd {
+    position: relative;
+    background-color: rgba(0,0,0,1);
+    border-bottom: 1px solid white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.1s ease-in-out;
+}
+
+.nav-up {
+    top: -84px;
+}
+
+.hd_dv {
+    position: relative;
+    max-width: 1800px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; 
+    margin: 9px; 
+    cursor: pointer;
+}
+.logo img {width: 100%;}
+
+.gnb {
+    width: 100%;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    text-align: center;
+    color: white;
+    padding: 2rem 3rem;
+    cursor: pointer;
+}
+.menu li:nth-of-type(3) {
+    padding: 2rem 4rem;
+}
+
+.ham {display: none;}
+.close { display: none;}
+.secA {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.welcom {
+    padding-top: 3rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcom p {
+    padding-top: 2rem;
+    font-size: 30px;
+}
+.secB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.joinD {
+    padding: 10px;
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.joinD h3 {
+    width: 100%;
+}
+.joinD > * {
+    padding: 10px;
+}
+.joinD > label {
+    display: block;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    width: 200px;
+}
+
+.joinD > div {
+    width: calc(100% - 200px);
+}
+
+.joinD > label,
+.joinD > div {
+    border-bottom: 1px solid lightgray;
+    margin-top: 2px;
+}
+.joinD > div > p {
+    display: none;
+}
+.joinD input:focus ~ p {
+    display: block;
+}
+.joinD input[type=tel],
+.joinD input[name*=email] {
+    width: 100px;
+}
+
+.joinD strong {
+    color: red;
+    font-size: 0.7rem;
+}
+
+.joinD input {
+    background-color: aliceblue;
+    width: 300px;
+    height: 30px;
+    border: 1px solid #eaeaea;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.joinD input:focus {
+    background-color: aliceblue;
+    border: 1px dotted lightgray;
+}
+.joinD label,
+.joinD div {
+    margin-top: 2rem;
+}
+.joinD p {
+    font-size: 10px;
+    color: darkgray;
+}
+label {
+    color: white;
+}
+
+.joinD button {
+    background-color: rgb(34, 24, 103);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    outline: none;
+    height: 30px;
+}
+
+.joinD button:hover,
+.joinD button:focus {
+    background-color: cornflowerblue;
+}
+
+.joinD select {
+    width: 100px;
+    height: 30px;
+}
+
+.but {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.btns {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-20%);
+    text-align: center;
+}
+@media (min-width:601px) and (max-width:1028px) {
+    .menu li {
+        padding: 2rem 2rem;
+        font-size: 12px;
+        transition: .5s;
+    }
+    .menu li:nth-of-type(3) {
+        padding: 2rem 3rem;
+    }
+ }
+@media (max-width:800px) {
+
+    .joinD > label{ width: 30%;}
+    .joinD > div {width: 100%;}
+
+
+}
+@media (max-width:600px) {
+    .logo {width: 90px; margin: 12px;}
+    .logo img {width: 100%;}
+    .gnb {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: #111;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .menu {
+        position: relative;
+        display: block;
+        padding-top: 5rem;
+        width: 100%;
+    }
+    .menu li {
+        padding: 2rem 3rem;
+        border-bottom: 1px solid white;
+    }
+    .menu li:nth-of-type(1) {
+        border-top: 1px solid white;
+    }
+    .menu li:hover {
+        background-color: rgba(230, 230, 230, 1);
+        color: black;
+    }
+    .ham {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .ham span {
+        display: block;
+        background-color: white;
+        width: 40px;
+        height: 4px;
+        margin: 3px;
+    }
+    .close {
+        
+        display: none;
+        position: absolute;
+        top: 35px;
+        right: 25px;
+        color: white;
+        cursor: pointer;
+    }
+    .close span {
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        background-color: white;
+        height: 4px;
+        margin: -4px;
+    }
+    .close span:nth-of-type(1) {
+        transform: rotate(45deg);
+    }
+    .close span:nth-of-type(2) {
+        transform: rotate(-45deg);
+    }
+ }
+
+ @media (max-width:450px) {
+    .welcom {
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .welcom p {
+        padding-top: 2rem;
+        font-size: 20px;
+    }
+    .joinD > label,
+.joinD > div {
+    border-bottom: 1px solid lightgray;
+    margin-top: 1rem;
+}
+.joinD input {
+    width: 200px;
+}
+.but {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.btns {
+    position: relative;
+    left: 0;
+    transform: translateX(0%);
+    text-align: center;
+}
+ }
